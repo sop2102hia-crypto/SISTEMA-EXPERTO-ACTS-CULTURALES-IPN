@@ -84,7 +84,7 @@ obtener_recomendaciones_minimas(Perfil, Recomendaciones) :-
     append(Temp, L3, ListaBruta),
     sort(ListaBruta, Recomendaciones),
     length(Recomendaciones, Cantidad),
-    Cantidad >= 3.
+    Cantidad >= 1.
 
 % ------------------------------------------------------------------------------
 % 3. SERVIDOR HTTP Y API JSON PARA LA PÁGINA WEB
