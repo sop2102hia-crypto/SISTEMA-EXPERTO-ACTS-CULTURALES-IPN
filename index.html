@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Experto Cultural IPN</title>
+    <!-- Aquí enlazamos tu nuevo diseño CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Buscador de Actividades Culturales IPN</h1>
+
+    <!-- FORMULARIO 1: RECOMENDACIÓN -->
+    <div class="contenedor">
+        <h2>Paso 1: Encuentra tu Actividad</h2>
+        <form id="form-recomendacion">
+            <label for="categoria">Categoría:</label>
+            <select id="categoria" required>
+                <option value="musica">Música</option>
+                <option value="danza">Danza</option>
+                <option value="teatro">Teatro</option>
+                <option value="artes_visuales">Artes Visuales</option>
+                <option value="literatura">Literatura</option>
+            </select>
+
+            <label for="habilidad">Habilidad:</label>
+            <select id="habilidad" required>
+                <option value="musical">Musical</option>
+                <option value="vocal">Vocal</option>
+                <option value="instrumental">Instrumental</option>
+                <option value="corporal">Corporal</option>
+                <option value="escenica">Escénica</option>
+                <option value="visual">Visual</option>
+                <option value="manual">Manual</option>
+                <option value="intelectual">Intelectual</option>
+            </select>
+
+            <label for="interes">Interés Principal:</label>
+            <select id="interes" required>
+                <option value="academico_clasico">Académico Clásico</option>
+                <option value="aire_libre_ritmo">Aire Libre / Ritmo</option>
+                <option value="interpretacion_vocal">Interpretación Vocal</option>
+                <option value="hobby_expresion">Hobby / Expresión</option>
+                <option value="expresion_artistica">Expresión Artística</option>
+                <option value="tradicion_ritmo">Tradición y Ritmo</option>
+                <option value="recreativo_social">Recreativo Social</option>
+                <option value="drama_actuacion">Drama y Actuación</option>
+                <option value="creatividad_humor">Creatividad y Humor</option>
+                <option value="tecnica_audiovisual">Técnica Audiovisual</option>
+                <option value="artes_plasticas">Artes Plásticas</option>
+                <option value="lectura_redaccion">Lectura y Redacción</option>
+            </select>
+
+            <label for="grupal">¿Trabajo Grupal?</label>
+            <select id="grupal" required>
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+
+            <button type="submit">Obtener Recomendaciones</button>
+        </form>
+        <div id="resultado-recomendacion" class="resultado"></div>
+    </div>
+
+    <!-- FORMULARIO 2: INSCRIPCIÓN -->
+    <div class="contenedor">
+        <h2>Paso 2: Inscripción</h2>
+        <form id="form-inscripcion">
+            <label for="boleta">ID de Estudiante (Boleta):</label>
+            <input type="text" id="boleta" placeholder="Ej. 2024123456" required>
+
+            <label for="actividad-inscripcion">Nombre exacto de la Actividad:</label>
+            <input type="text" id="actividad-inscripcion" placeholder="Ej. Coro del IPN" required>
+
+            <button type="submit">Inscribirme</button>
+        </form>
+        <div id="resultado-inscripcion" class="resultado"></div>
+    </div>
+
+    <!-- Aquí enlazamos tu nueva lógica JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
