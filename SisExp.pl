@@ -1,3 +1,10 @@
+:- use_module(library(http/http_server)).
+:- use_module(library(http/http_json)).
+:- use_module(library(http/http_parameters)).
+
+% Base de datos dinámica para registrar las inscripciones de los estudiantes
+:- dynamic inscrito/2. % formato: inscrito(EstudianteID, Actividad)
+
 %Hechos
 
 % actividad(Nombre, Categoria, Habilidad, Enfoque)
@@ -31,18 +38,6 @@ representativo('Grupo Representativo de Teatro').
 rendimiento_academico('2026630001', regular).
 rendimiento_academico('2026630002', regular).
 rendimiento_academico('2026630003', irregular).
-rendimiento_academico('2026630004', regular).
-rendimiento_academico('2026630005', regular).
-rendimiento_academico('2026630006', irregular).
-rendimiento_academico('2026630007', regular).
-rendimiento_academico('2026630008', regular).
-rendimiento_academico('2026630009', irregular).
-rendimiento_academico('2026630010', regular).
-rendimiento_academico('2026630011', regular).
-rendimiento_academico('2026630012', irregular).
-rendimiento_academico('2026630013', regular).
-rendimiento_academico('2026630014', regular).
-rendimiento_academico('2026630015', irregular).
 
 %Reglas
 
@@ -119,6 +114,4 @@ api_inscribir(Request) :-
     ]),
     realizar_inscripcion(EstudianteID, Actividad, Mensaje),
     reply_json(json([status(ok), mensaje(Mensaje)])).
-
-
 
